@@ -2,6 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+<<<<<<< HEAD
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -10,11 +11,20 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
+=======
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.3.1</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+>>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
 	<groupId>io.github.cursodsousa</groupId>
 	<artifactId>libraryapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>libraryapi</name>
 	<description>Demo project for Spring Boot</description>
+<<<<<<< HEAD
 
 	<properties>
 		<java.version>21</java.version>
@@ -29,12 +39,32 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+=======
+	<url/>
+	<licenses>
+		<license/>
+	</licenses>
+	<developers>
+		<developer/>
+	</developers>
+	<scm>
+		<connection/>
+		<developerConnection/>
+		<tag/>
+		<url/>
+	</scm>
+	<properties>
+		<java.version>21</java.version>
+	</properties>
+	<dependencies>
+>>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
 		<dependency>
+<<<<<<< HEAD
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
@@ -56,16 +86,22 @@
 		</dependency>
 
 		<dependency>
+=======
+>>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+<<<<<<< HEAD
 
 		<dependency>
 			<groupId>org.mapstruct</groupId>
@@ -73,12 +109,17 @@
 			<version>${mapstruct.version}</version>
 		</dependency>
 
+=======
+>>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
 	</dependencies>
 
 	<build>
@@ -95,6 +136,7 @@
 					</excludes>
 				</configuration>
 			</plugin>
+<<<<<<< HEAD
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -127,6 +169,8 @@
 
 			</plugin>
 
+=======
+>>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
 		</plugins>
 	</build>
 

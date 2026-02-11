@@ -1,12 +1,7 @@
-package io.github.cursodsousa.libraryapi.model;
+package io.github.welberrr.libraryapi.model;
 
 import jakarta.persistence.*;
-<<<<<<< HEAD
-import lombok.Data;
-import lombok.ToString;
-=======
 import lombok.*;
->>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -16,6 +11,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "livro")
 @Data
@@ -25,7 +22,7 @@ public class Livro {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue
     private UUID id;
 
     @Column(name = "isbn", length = 20, nullable = false)
@@ -41,13 +38,10 @@ public class Livro {
     @Column(name = "genero", length = 30, nullable = false)
     private GeneroLivro genero;
 
-    @Column(name = "preco", precision = 18, scale = 2)
+    @Column(precision = 10, scale = 2)
     private BigDecimal preco;
 
-    @ManyToOne(
-//            cascade = CascadeType.ALL,
-        fetch = FetchType.LAZY
-    )
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "id_autor")
     private Autor autor;
 
@@ -59,12 +53,7 @@ public class Livro {
     @Column(name = "data_atualizacao")
     private LocalDateTime dataAtualizacao;
 
-<<<<<<< HEAD
-    @ManyToOne
-    @JoinColumn(name = "id_usuario")
-    private Usuario usuario;
-=======
     @Column(name = "id_usuario")
     private UUID idUsuario;
->>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
+
 }

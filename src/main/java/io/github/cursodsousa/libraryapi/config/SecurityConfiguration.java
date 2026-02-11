@@ -1,5 +1,6 @@
 package io.github.cursodsousa.libraryapi.config;
 
+<<<<<<< HEAD
 import io.github.cursodsousa.libraryapi.security.CustomUserDetailsService;
 import io.github.cursodsousa.libraryapi.service.UsuarioService;
 import org.springframework.context.annotation.Bean;
@@ -13,11 +14,22 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+=======
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+>>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
+<<<<<<< HEAD
 @EnableMethodSecurity(securedEnabled = true, jsr250Enabled = true)
+=======
+>>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
 public class SecurityConfiguration {
 
     @Bean
@@ -26,16 +38,23 @@ public class SecurityConfiguration {
                 .csrf(AbstractHttpConfigurer::disable)
                 .httpBasic(Customizer.withDefaults())
                 .formLogin(configurer -> {
+<<<<<<< HEAD
                     configurer.loginPage("/login");
                 })
                 .authorizeHttpRequests(authorize -> {
                     authorize.requestMatchers("/login/**").permitAll();
                     authorize.requestMatchers(HttpMethod.POST, "/usuarios/**").permitAll();
 
+=======
+                    configurer.loginPage("/login").permitAll();
+                })
+                .authorizeHttpRequests(authorize -> {
+>>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
                     authorize.anyRequest().authenticated();
                 })
                 .build();
     }
+<<<<<<< HEAD
 
     @Bean
     public PasswordEncoder passwordEncoder(){
@@ -61,4 +80,6 @@ public class SecurityConfiguration {
 
         return new CustomUserDetailsService(usuarioService);
     }
+=======
+>>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
 }
