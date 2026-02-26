@@ -48,12 +48,7 @@ public class Autor {
     @Column(name = "data_atualizacao")
     private LocalDateTime dataAtualizacao;
 
-<<<<<<< HEAD
     @ManyToOne
     @JoinColumn(name = "id_usuario")
     private Usuario usuario;
-=======
-    @Column(name = "id_usuario")
-    private UUID idUsuario;
->>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
 }

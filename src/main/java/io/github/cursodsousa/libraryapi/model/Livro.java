@@ -1,12 +1,8 @@
 package io.github.cursodsousa.libraryapi.model;
 
 import jakarta.persistence.*;
-<<<<<<< HEAD
 import lombok.Data;
 import lombok.ToString;
-=======
-import lombok.*;
->>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -59,12 +55,7 @@ public class Livro {
     @Column(name = "data_atualizacao")
     private LocalDateTime dataAtualizacao;
 
-<<<<<<< HEAD
     @ManyToOne
     @JoinColumn(name = "id_usuario")
     private Usuario usuario;
-=======
-    @Column(name = "id_usuario")
-    private UUID idUsuario;
->>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
 }

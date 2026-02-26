@@ -2,15 +2,10 @@ package io.github.cursodsousa.libraryapi.service;
 
 import io.github.cursodsousa.libraryapi.exceptions.OperacaoNaoPermitidaException;
 import io.github.cursodsousa.libraryapi.model.Autor;
-<<<<<<< HEAD
 import io.github.cursodsousa.libraryapi.model.Usuario;
 import io.github.cursodsousa.libraryapi.repository.AutorRepository;
 import io.github.cursodsousa.libraryapi.repository.LivroRepository;
 import io.github.cursodsousa.libraryapi.security.SecurityService;
-=======
-import io.github.cursodsousa.libraryapi.repository.AutorRepository;
-import io.github.cursodsousa.libraryapi.repository.LivroRepository;
->>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
 import io.github.cursodsousa.libraryapi.validator.AutorValidator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Example;
@@ -28,18 +23,12 @@ public class AutorService {
     private final AutorRepository repository;
     private final AutorValidator validator;
     private final LivroRepository livroRepository;
-<<<<<<< HEAD
     private final SecurityService securityService;
 
     public Autor salvar(Autor autor){
         validator.validar(autor);
         Usuario usuario = securityService.obterUsuarioLogado();
         autor.setUsuario(usuario);
-=======
-
-    public Autor salvar(Autor autor){
-        validator.validar(autor);
->>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
         return repository.save(autor);
     }
 

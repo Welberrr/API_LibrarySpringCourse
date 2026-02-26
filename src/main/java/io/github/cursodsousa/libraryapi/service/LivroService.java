@@ -2,13 +2,9 @@ package io.github.cursodsousa.libraryapi.service;
 
 import io.github.cursodsousa.libraryapi.model.GeneroLivro;
 import io.github.cursodsousa.libraryapi.model.Livro;
-<<<<<<< HEAD
 import io.github.cursodsousa.libraryapi.model.Usuario;
 import io.github.cursodsousa.libraryapi.repository.LivroRepository;
 import io.github.cursodsousa.libraryapi.security.SecurityService;
-=======
-import io.github.cursodsousa.libraryapi.repository.LivroRepository;
->>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
 import io.github.cursodsousa.libraryapi.validator.LivroValidator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -29,18 +25,12 @@ public class LivroService {
 
     private final LivroRepository repository;
     private final LivroValidator validator;
-<<<<<<< HEAD
     private final SecurityService securityService;
 
     public Livro salvar(Livro livro) {
         validator.validar(livro);
         Usuario usuario = securityService.obterUsuarioLogado();
         livro.setUsuario(usuario);
-=======
-
-    public Livro salvar(Livro livro) {
-        validator.validar(livro);
->>>>>>> 87d27d522a60b417216b9de449e028f835e8ca8e
         return repository.save(livro);
     }
 
